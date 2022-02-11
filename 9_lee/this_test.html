@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.name = 'yuguang'
+        var getName = function () {
+            let name = 'zhangsang';
+            console.log(this.name);
+        }
+        getName();
+        var obj = {
+            name:'zas',
+            getName:function(){
+                console.log(this.name);
+            }   
+        };
+        var getNow = obj.getName;//此处getName是对象里的一个属性
+        getNow();
+    </script>
+</body>
+</html>
