@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .circle {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, calc(-50% + 80px));
+        text-align: center;
+    }
+    .circle-line {
+        position: absolute;
+        top: 50px;
+        bottom: 50px;
+        left: 50px;
+        right: 50px;
+        margin: auto;
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+    .tips {
+        position: absolute;
+        z-index: 200;
+        top: 0;
+        left: 50%;
+        margin-left: -5px;
+        width: 10px;
+        height: 50%;
+        transform-origin: 50% 100%;
+        transform: rotate(-105deg);
+
+        animation: myInterview 0.75s both ease-in-out infinite;
+    }
+    @keyframes myInterview {
+        0% {
+            transform: rotate3D(0, 0, 1, -105deg);
+        }
+        to {
+            transform: rotate3D(0, 0, 1, 255deg);
+        }
+    }
+    .tips:before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        z-index: 9;
+        left: 0px;
+        top: -5px;
+        border: 1px solid black;
+    }
+</style>
+        
+</head>
+<body>
+    <div class="circle">
+        <div class="circle-line">
+            <div class="tips rotate"></div>
+        </div>
+     </div>
+     
+</body>
+</html>
